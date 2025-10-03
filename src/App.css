@@ -89,10 +89,32 @@ html, body, #root { height: 100%; margin: 0; font-family: "Segoe UI", Roboto, Ar
 .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 
 /* card */
-.card { background: var(--card); padding: 18px; border-radius: 10px; box-shadow: 0 6px 0 rgba(0,0,0,0.25); border-left: 6px solid rgba(0,0,0,0.08); }
+.card { 
+  background: var(--card); 
+  padding: 18px; 
+  border-radius: 10px; 
+  box-shadow: 0 6px 0 rgba(0,0,0,0.25); 
+  border-left: 6px solid #0077cc; /* accent stripe is blue */
+}
 .card h4 { margin: 0 0 8px 0; font-size: 20px; }
 .card p { margin: 6px 0; font-weight: 600; }
-.card .delete { margin-top: 10px; padding: 8px 10px; border-radius: 6px; border: 1px solid rgba(0,0,0,0.15); background: var(--button-bg); color: var(--button-text); cursor: pointer; }
+
+/* delete button (red) */
+.card .delete {
+  margin-top: 10px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: none;
+  background: #e63946;   /* bright red */
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.card .delete:hover {
+  background: #b71c1c;   /* darker red on hover */
+}
 
 /* responsive tweaks */
 @media (max-width: 600px) {
